@@ -21,20 +21,20 @@ fs.writeFileSync(filePath, JSON.stringify(chirps, null, 2), 'utf-8', err => cons
 //fs.appendFileSync(filePath, JSON.stringify(chirps), 'utf-8', err => console.log(err))
 
 //option 3: add contents of chirps array here to existing chirps array in json
- fs.readFile(filePath, 'utf-8', (err, data) => {
-    if (err) console.log(err)
+//  fs.readFile(filePath, 'utf-8', (err, data) => {
+//     if (err) console.log(err)
     
   //  a. convert contents to js
-    let chirpsJS = JSON.parse(data)
+    // let chirpsJS = JSON.parse(data)
 
     //b. push new contents --- but results in nested array !!
-    chirpsJS.chirps.push(chirps)
+    // chirpsJS.chirps.push(chirps)
 
     //c. convert data back to JSON, write to file
-    fs.writeFile(filePath, JSON.stringify(chirpsJS, null, 2), 'utf-8', (err) => {
-        if (err) console.log(err)
-    })
-})
+    // fs.writeFile(filePath, JSON.stringify(chirpsJS, null, 2), 'utf-8', (err) => {
+    //     if (err) console.log(err)
+    // })
+// })
 
 
 
